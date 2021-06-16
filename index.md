@@ -79,7 +79,7 @@ address.
 {% endcomment %}
 {% if page.latlng %}
 <p id="where">
-  <strong>Where:</strong>
+  <strong>Où:</strong>
   {{page.address}}.
   Obtenez l’itinéraire avec
   <a href="//www.openstreetmap.org/?mlat={{page.latlng | replace:',','&mlon='}}&zoom=16">OpenStreetMap</a>
@@ -95,7 +95,7 @@ This block displays the date and links to Google Calendar.
 {% endcomment %}
 {% if page.humandate %}
 <p id="when">
-  <strong>When:</strong>
+  <strong>Quand:</strong>
   {{page.humandate}}.
   {% include workshop_calendar.html %}
 </p>
@@ -107,15 +107,15 @@ SPECIAL REQUIREMENTS
 Modify the block below if there are any special requirements.
 {% endcomment %}
 <p id="requirements">
-  <strong>Requirements:</strong> Participants must bring a laptop with a
-  Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on. They should have a few specific software packages installed (listed <a href="#setup">below</a>).
+  <strong>Exigences:</strong> Les participants doivent apporter leur ordinateur, fonctionnant
+  macOS, Linux, ou Windows (pas de tablette, ni Chromebook, etc.) et possédant les droits d’administration. Certaines logiciels peuvent être installés (voir liste <a href="#setup">plus bas</a>).
 </p>
 
 {% comment%}
 CODE OF CONDUCT
 {% endcomment %}
 <p id="code-of-conduct">
-<strong>Code of Conduct:</strong>  Everyone who participates in Carpentries activities is required to conform to the <a href="https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html">Code of Conduct</a>. This document also outlines how to report an incident if needed.
+<strong>Code de conduite:</strong>  Chaque participant aux activités Carpentries doivent se respecter le <a href="https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html">Code de Conduite</a>. Ce document explique en outre comment rapporter un incident, si nécessaire.
 </p>
 
 
@@ -126,21 +126,15 @@ Modify the block below if there are any barriers to accessibility or
 special instructions.
 {% endcomment %}
 <p id="accessibility">
-  <strong>Accessibility:</strong> We are committed to making this workshop
-  accessible to everybody.
-  The workshop organizers have checked that:
+  <strong>Accessibilité:</strong> Nous nous sommes engagés à rendre nos atelier accessibles à tous.
+  L’organisateur de cet atelier a vérifié que:
 </p>
 <ul>
-  <li>The room is wheelchair / scooter accessible.</li>
-  <li>Accessible restrooms are available.</li>
+  <li>La pièce (le cas échéant) est accessible aux fauteuils roulants.</li>
+  <li>Des toilettes accessibles sont disponibles.</li>
 </ul>
 <p>
-  Materials will be provided in advance of the workshop and
-  large-print handouts are available if needed by notifying the
-  organizers in advance.  If we can help making learning easier for
-  you (e.g. sign-language interpreters, lactation facilities) please
-  get in touch (using contact details below) and we will
-  attempt to provide them.
+  Les documents seront fournis avant l’atelier et et des documents en gros caractères sont disponibles si nécessaire en prévenant les organisateurs à l’avance. Si nous pouvons vous aider à rendre l’apprentissage plus facile pour vous (par exemple, interprètes en langue des signes, installations d'allaitement), veuillez nous contacter (aux coordonnées ci-dessous) et nous essaierons de vous les fournir.
 </p>
 
 {% comment %}
@@ -150,7 +144,7 @@ Display the contact email address set in the configuration file.
 {% endcomment %}
 <p id="contact">
   <strong>Contact</strong>:
-  Please email
+  Veuillez envoyer un courriel à
   {% if page.email %}
   {% for email in page.email %}
   {% if forloop.last and page.email.size > 1 %}
@@ -165,7 +159,7 @@ Display the contact email address set in the configuration file.
   {% else %}
   to-be-announced
   {% endif %}
-  for more information.
+  pour plus d’informations.
 </p>
 
 <hr/>
@@ -174,13 +168,13 @@ Display the contact email address set in the configuration file.
 SURVEYS - DO NOT EDIT SURVEY LINKS
 {% endcomment %}
 <h2 id="surveys">Surveys</h2>
-<p>Please be sure to complete these surveys before and after the workshop.</p>
+<p>Veuillez vous assurer de compléter les sondages avant et après l’atelier.</p>
 {% if site.carpentry == "swc" %}
 <p><a href="{{ site.swc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
 <p><a href="{{ site.swc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
 {% elsif site.carpentry == "dc" %}
-<p><a href="{{ site.dc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
-<p><a href="{{ site.dc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
+<p><a href="{{ site.dc_pre_survey }}{{ site.github.project_title }}">Sondage pré-atelier</a></p>
+<p><a href="{{ site.dc_post_survey }}{{ site.github.project_title }}">Sondage post-atelier</a></p>
 {% elsif site.carpentry == "lc" %}
 <p><a href="{{ site.lc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
 <p><a href="{{ site.lc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
@@ -268,23 +262,19 @@ please preview your site before committing, and make sure to run
 <h2 id="setup">Setup</h2>
 
 <p>
-  To participate in a
+  Pour participer à un atelier sur la
   {% if page.carpentry == "swc" %}
   Software Carpentry
   {% elsif page.carpentry == "dc" %}
-  Data Carpentry
+  menuiserie des données (Data Carpentry)
   {% elsif page.carpentry == "lc" %}
   Library Carpentry
   {% endif %}
   workshop,
-  you will need access to the software described below.
-  In addition, you will need an up-to-date web browser.
+  vous devrez avoir accès aux logiciels décrits ci-bas.
+  De plus, vous devez avoir accès à un fureteur Web récent et à jour.
 </p>
-<p>
-  We maintain a list of common issues that occur during installation as a reference for instructors
-  that may be useful on the
-  <a href = "{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
-</p>
+
 
 <div id="shell"> {% comment %} Start of 'shell' section. {% endcomment %}
   <h3>The Bash Shell</h3>
