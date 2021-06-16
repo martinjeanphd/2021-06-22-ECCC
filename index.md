@@ -281,7 +281,7 @@ De plus, vous pouvez installer à votre choix les applications suivantes:
 
 
 <div id="shell"> {% comment %} Start of 'shell' section. {% endcomment %}
-  <h3>The Bash Shell</h3>
+  <h3>Le Shell Bash</h3>
   <p>
     Bash est un interpréteur de commandes couramment utilisé qui vous permet d'effectuer des tâches simples plus rapidement.
   </p>
