@@ -39,7 +39,7 @@ see the changes take effect locally.
 {% endif %}
 
 
-<h2 id="general">General Information</h2>
+<h2 id="general">Information générale</h2>
 
 {% comment %}
 INTRODUCTION
@@ -167,7 +167,7 @@ Display the contact email address set in the configuration file.
 {% comment %}
 SURVEYS - DO NOT EDIT SURVEY LINKS
 {% endcomment %}
-<h2 id="surveys">Surveys</h2>
+<h2 id="surveys">Sondages</h2>
 <p>Veuillez vous assurer de compléter les sondages avant et après l’atelier.</p>
 {% if site.carpentry == "swc" %}
 <p><a href="{{ site.swc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
@@ -190,7 +190,7 @@ Show the workshop's schedule.  Edit the items and times in the table
 to match your plans.  You may also want to change 'Day 1' and 'Day
 2' to be actual dates or days of the week.
 {% endcomment %}
-<h2 id="schedule">Schedule</h2>
+<h2 id="schedule">Horaire</h2>
 
 {% if page.carpentry == "swc" %}
 {% include sc/schedule.html %}
@@ -259,7 +259,7 @@ please preview your site before committing, and make sure to run
 'tools/check' as well.
 {% endcomment %}
 
-<h2 id="setup">Setup</h2>
+<h2 id="setup">Préparatifs</h2>
 
 <p>
   Pour participer à un atelier sur la
@@ -271,16 +271,19 @@ please preview your site before committing, and make sure to run
   Library Carpentry
   {% endif %}
   workshop,
-  vous devrez avoir accès aux logiciels décrits ci-bas.
+  vous devrez avoir accès aux logiciels suivants: Notepad++, OpenRefine, R, et RStudio.
   De plus, vous devez avoir accès à un fureteur Web récent et à jour.
+</p>
+
+<p>
+De plus, vous pouvez installer à votre choix les applications suivantes:
 </p>
 
 
 <div id="shell"> {% comment %} Start of 'shell' section. {% endcomment %}
   <h3>The Bash Shell</h3>
   <p>
-    Bash is a commonly-used shell that gives you the power to do simple
-    tasks more quickly.
+    Bash est un interpréteur de commandes couramment utilisé qui vous permet d'effectuer des tâches simples plus rapidement.
   </p>
 
   <div>
@@ -382,21 +385,16 @@ please preview your site before committing, and make sure to run
   is given at https://help.github.com/articles/supported-browsers/{% endcomment %}
   <h3>Git</h3>
   <p>
-    Git is a version control system that lets you track who made changes
-    to what when and has options for easily updating a shared or public
-    version of your code
-    on <a href="https://github.com/">github.com</a>. You will need a
-    <a href="https://help.github.com/articles/supported-browsers/">supported
-    web browser</a>.
+    Git est un système de gestion des versions permettant de suivre les modifications faites (qui, quoi et quand) et offre des options facilitant la mise à jour de code partagé ou publique sur <a href="https://github.com/">github.com</a> ou l'équivalent. Vous devez utiliser un des
+    <a href="https://help.github.com/articles/supported-browsers/">fureteurs web supportés</a>.
   </p>
   <p>
-    You will need an account at <a href="https://github.com/">github.com</a>
-    for parts of the Git lesson. Basic GitHub accounts are free. We encourage
-    you to create a GitHub account if you don't have one already.
-    Please consider what personal information you'd like to reveal. For
-    example, you may want to review these
+    Vous devez posséder un compte <a href="https://github.com/">github.com</a>
+    pour certaines des parties de la formation. Le compte de base GitHub est gratuit. Nous vous encourageons à créer un compte GitHub si vous n’en avez pas un.
+    Prendre en considération quelles informations personnelles vous souhaitez voir divulguer. Par exemple,
+    vous pouvez consulter ces
     <a href="https://help.github.com/articles/keeping-your-email-address-private/">instructions
-      for keeping your email address private</a> provided at GitHub.
+      pour ne pas divulguer votre adresse courriel</a> utilisée pour GitHub.
   </p>
 
   <div>
@@ -442,17 +440,11 @@ please preview your site before committing, and make sure to run
 </div> {% comment %} End of 'Git' section. {% endcomment %}
 
 <div id="editor"> {% comment %} Start of 'editor' section. {% endcomment %}
-  <h3>Text Editor</h3>
+  <h3>Éditeur de texte</h3>
 
   <p>
-    When you're writing code, it's nice to have a text editor that is
-    optimized for writing code, with features like automatic
-    color-coding of key words. The default text editor on macOS and
-    Linux is usually set to Vim, which is not famous for being
-    intuitive. If you accidentally find yourself stuck in it, hit
-    the <kbd>Esc</kbd> key, followed by <kbd>:</kbd>+<kbd>Q</kbd>+<kbd>!</kbd>
-    (colon, lower-case 'q', exclamation mark), then hitting <kbd>Return</kbd> to
-    return to the shell.
+    Lorsque vous écrivez du code, il est agréable d’avoir un éditeur de texte qui est optimisé
+    pour l'écriture de code, avec des fonctions telles que le codage couleur automatique des mots clés.
   </p>
 
   <div>
@@ -506,111 +498,14 @@ please preview your site before committing, and make sure to run
   </div>
 </div> {% comment %} End of 'editor' section. {% endcomment %}
 
-<div id="python"> {% comment %} Start of 'Python' section. Remove the third paragraph if
-  the workshop will teach Python using something other than
-  the Jupyter notebook.
-  Details at https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatibility {% endcomment %}
-  <h3>Python</h3>
-
-  <p>
-    <a href="https://python.org">Python</a> is a popular language for
-    research computing, and great for general-purpose programming as
-    well.  Installing all of its research packages individually can be
-    a bit difficult, so we recommend
-    <a href="https://www.anaconda.com/distribution/">Anaconda</a>,
-    an all-in-one installer.
-  </p>
-
-  <p>
-    Regardless of how you choose to install it,
-    <strong>please make sure you install Python version 3.x</strong>
-    (e.g., 3.6 is fine).
-  </p>
-
-  <p>
-    We will teach Python using the <a href="https://jupyter.org/">Jupyter notebook</a>,
-    a programming environment that runs in a web browser. For this to work you will need a reasonably
-    up-to-date browser. The current versions of the Chrome, Safari and
-    Firefox browsers are all
-    <a href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatibility">supported</a>
-    (some older browsers, including Internet Explorer version 9
-    and below, are not).
-  </p>
-
-  <div>
-    <ul class="nav nav-tabs nav-justified" role="tablist">
-      <li role="presentation" class="active"><a data-os="windows" href="#python-windows" aria-controls="Windows" role="tab" data-toggle="tab">Windows</a></li>
-      <li role="presentation"><a data-os="macos" href="#python-macos" aria-controls="MacOS" role="tab" data-toggle="tab">MacOS</a></li>
-      <li role="presentation"><a data-os="linux" href="#python-linux" aria-controls="Linux" role="tab" data-toggle="tab">Linux</a></li>
-    </ul>
-
-    <div class="tab-content">
-      <article role="tabpanel" class="tab-pane active" id="python-windows">
-        <a href="https://www.youtube.com/watch?v=xxQ0mzZ8UvA">Video Tutorial</a>
-        <ol>
-          <li>Open <a href="https://www.anaconda.com/download/#windows">https://www.anaconda.com/download/#windows</a> with your web browser.</li>
-          <li>Download the Python 3 installer for Windows.</li>
-          <li>Install Python 3 using all of the defaults for installation <em>except</em> make sure to check <strong>Add Anaconda to my PATH environment variable</strong>.</li>
-        </ol>
-      </article>
-      <article role="tabpanel" class="tab-pane active" id="python-macos">
-        <a href="https://www.youtube.com/watch?v=TcSAln46u9U">Video Tutorial</a>
-        <ol>
-          <li>Open <a href="https://www.anaconda.com/download/#macos">https://www.anaconda.com/download/#macos</a> with your web browser.</li>
-          <li>Download the Python 3 installer for OS X.</li>
-          <li>Install Python 3 using all of the defaults for installation.</li>
-        </ol>
-      </article>
-      <article role="tabpanel" class="tab-pane active" id="python-linux">
-        <ol>
-          <li>Open <a href="https://www.anaconda.com/download/#linux">https://www.anaconda.com/download/#linux</a> with your web browser.</li>
-          <li>Download the Python 3 installer for Linux.<br>
-            (The installation requires using the shell. If you aren't
-            comfortable doing the installation yourself
-            stop here and request help at the workshop.)
-          </li>
-          <li>
-            Open a terminal window.
-          </li>
-          <li>
-            Type <pre>bash Anaconda3-</pre> and then press
-            <kbd>Tab</kbd>. The name of the file you just downloaded should
-            appear. If it does not, navigate to the folder where you
-            downloaded the file, for example with:
-            <pre>cd Downloads</pre>
-            Then, try again.
-          </li>
-          <li>
-            Press <kbd>Return</kbd>. You will follow the text-only prompts. To move through
-            the text, press <kbd>Spacebar</kbd>. Type <code>yes</code> and
-            press enter to approve the license. Press enter to approve the
-            default location for the files. Type <code>yes</code> and
-            press enter to prepend Anaconda to your <code>PATH</code>
-            (this makes the Anaconda distribution the default Python).
-          </li>
-          <li>
-            Close the terminal window.
-          </li>
-        </ol>
-      </article>
-    </div>
-  </div>
-  {% comment %}
-  <p>
-    Once you are done installing the software listed above,
-    please go to <a href="setup/index.html">this page</a>,
-    which has instructions on how to test that everything was installed correctly.
-  </p>
-  {% endcomment %}
-</div> {% comment %} End of 'Python' section. {% endcomment %}
 
 <div id="r"> {% comment %} Start of 'R' section. {% endcomment %}
   <h3>R</h3>
 
   <p>
-    <a href="https://www.r-project.org">R</a> is a programming language
-    that is especially powerful for data exploration, visualization, and
-    statistical analysis. To interact with R, we use
+    <a href="https://www.r-project.org">R</a> est un langage de programmation spécialement
+    conçu pour l'exploration, la visualisation et l'analyse statistique de données.
+    Pour intéragir avec R, nous utilisons
     <a href="https://www.rstudio.com/">RStudio</a>.
   </p>
 
@@ -660,93 +555,12 @@ please preview your site before committing, and make sure to run
   </div>
 </div> {% comment %} End of 'R' section. {% endcomment %}
 
-<div id="sql"> {% comment %} Start of 'SQLite' section. {% endcomment %}
-  <h3>SQLite</h3>
-
-  <p>
-    SQL is a specialized programming language used with databases.  We
-    use a simple database manager called
-    <a href="https://www.sqlite.org/">SQLite</a> in our lessons.
-  </p>
-
-  <div>
-    <ul class="nav nav-tabs nav-justified" role="tablist">
-      <li role="presentation" class="active"><a data-os="windows" href="#sql-windows" aria-controls="Windows" role="tab" data-toggle="tab">Windows</a></li>
-      <li role="presentation"><a data-os="macos" href="#sql-macos" aria-controls="MacOS" role="tab" data-toggle="tab">MacOS</a></li>
-      <li role="presentation"><a data-os="linux" href="#sql-linux" aria-controls="Linux" role="tab" data-toggle="tab">Linux</a></li>
-      {% if page.carpentry != 'dc' %}
-      <li role="presentation"><a data-os="Web" href="#sql-web" aria-controls="Linux" role="tab" data-toggle="tab">Web</a></li>
-      {% endif %}
-    </ul>
-    {% if page.carpentry == 'dc' %}
-    <div class="tab-content">
-      <article role="tabpanel" class="tab-pane active" id="sql-windows">
-        <p>
-          Visit <a href="https://sqlitebrowser.org/dl/">SqliteBrowser</a> and download and install it. Version 3.11.0 or greater.
-        </p>
-      </article>
-      <article role="tabpanel" class="tab-pane active" id="sql-macos">
-        <p>
-          Visit <a href="https://sqlitebrowser.org/dl/">SqliteBrowser</a> and download and install it. Version 3.11.0 or greater.
-        </p>
-      </article>
-      <article role="tabpanel" class="tab-pane active" id="sql-linux">
-        <p>
-          Visit <a href="https://sqlitebrowser.org/dl/">SqliteBrowser</a> and download and install it. Version 3.11.0 or greater.
-        </p>
-      </article>
-
-    </div>
-    {%else%}
-    <div class="tab-content">
-      <article role="tabpanel" class="tab-pane active" id="sql-windows">
-        <p>
-          <ul>
-            <li>Run git-bash from the start menu</li>
-            <li>Copy the following <code>curl {{site.url}}{{site.baseurl}}/getsql.sh | bash</code></li>
-            <li>Paste it into the window that git bash opened. If you're unsure, ask an instructor for help</li>
-            <li>You should see something like <code>3.27.2 2019-02-25 16:06:06 ...</code></li>
-          </ul>
-
-          <p>If you want to do this manually, download <a href="https://www.sqlite.org/2019/sqlite-tools-win32-x86-3270200.zip">sqlite3</a>, make a bin directory in the user's home directory, unzip sqlite3, move it into the bin directory, and then add the bin directory to the path.</p>
-
-        </p>
-      </article>
-      <article role="tabpanel" class="tab-pane active" id="sql-macos">
-        <p>
-          SQLite comes pre-installed on macOS.
-        </p>
-      </article>
-      <article role="tabpanel" class="tab-pane active" id="sql-linux">
-        <p>
-          SQLite comes pre-installed on Linux.
-        </p>
-      </article>
-      <article role="tabpanel" class="tab-pane active" id="sql-web">
-        <p>
-          <ul>
-            <li>In case of problems: register for an account at <a href="http://pythonanywhere.com/">Python Anywhere</a></li>
-            <li>Download <a href="http://swcarpentry.github.io/sql-novice-survey/files/survey.db">survey.db</a></li>
-            <li>Click on files and upload survey.db</li>
-            <li>Click on dashboard and Choose new console <code>$ bash</code></li>
-            </ul>
-        </p>
-      </article>
-    </div>
-      {%endif%}
-  </div>
-
-  <p><strong>If you installed Anaconda, it also has a copy of SQLite
-      <a href="https://github.com/ContinuumIO/anaconda-issues/issues/307">without support to <code>readline</code></a>.
-      Instructors will provide a workaround for it if needed.</strong></p>
-</div> {% comment %} End of 'SQLite' section. {% endcomment %}
 
 <div id="openrefine"> {% comment %} Start of 'OpenRefine' section. {% endcomment %}
   <h3>OpenRefine</h3>
   <p>
-    For this lesson you will need <em>OpenRefine</em> and a
-    web browser. <em>Note:</em> this is a Java program that runs on your machine (not in the cloud).
-    It runs inside a web browser, but no web connection is needed.
+    Vous aurez besoin dans cet atelier d’<em>OpenRefine</em> et d’un fureteur Web. <em>Note:</em> il s’agit d’un programme Java qui s’exécute sur votre ordinateur (et non en ligne), dans votre fureteur Web,
+    mais sans connexion à internet.
   </p>
 
   <div>
